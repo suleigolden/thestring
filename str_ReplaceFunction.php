@@ -17,5 +17,20 @@ $change = str_replace($searchString, $replaceString, $input);
 //Calling/Testing Method 1
 echo "Method 1: ".stringReduce_one("BCBBAABABAAACBCC")."<hr>";
 
+//Method 2 using Loop
+function stringReduce_two($input) {
+    $previous;
+    do{
+       $previous = $input;
+/*Search and Replace each index String using this Rules: 
+'AB' -> 'AA','BA' -> 'AA', 'CB' -> 'CC', 'BC' -> 'CC','AA' -> 'A', 'CC' -> 'C',*/
+		 $input = str_replace(
+			array("AB","BA","CB","BC","AA","CC"),
+			array("AA", "AA","CC","CC","A","C"),
+			$input
+		);
+} while ($previous != $input);
+        return $input;
+}
 
 ?>
