@@ -32,5 +32,7 @@ function stringReduce_two($input) {
 } while ($previous != $input);
         return $input;
 }
+//Calling/Testing Method 2
+echo "Method 2: ".stringReduce_two("BCBBAABABAAACBCC");
 
 ?>
