@@ -14,6 +14,8 @@ $change = str_replace($searchString, $replaceString, $input);
 	return stringReduce_one($change);
   }
 }
+//Calling/Testing Method 1
+echo "Method 1: ".stringReduce_one("BCBBAABABAAACBCC")."<hr>";
 
 
 ?>
